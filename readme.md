@@ -66,6 +66,23 @@ Curl command XML
 ```
 curl -H "Accept: application/xml" http://localhost:8080/primes/10
 ```
+**XML Response** <br>
+Request: http://localhost:8080/primes/10 <br>
+Headers: Accept - application/xml
+```
+<Outcome>
+    <success>true</success>
+    <message>Success</message>
+    <data>
+        <primeNumbers>
+            <primeNumbers>2</primeNumbers>
+            <primeNumbers>3</primeNumbers>
+            <primeNumbers>5</primeNumbers>
+            <primeNumbers>7</primeNumbers>
+        </primeNumbers>
+    </data>
+</Outcome>
+```
 
 Curl command JSON
 ```
@@ -88,25 +105,6 @@ Headers: Accept - application/json
         ]
     }
 }
-```
-
-
-**XML Response** <br>
-Request: http://localhost:8080/primes/10 <br>
-Headers: Accept - application/xml
-```
-<Outcome>
-    <success>true</success>
-    <message>Success</message>
-    <data>
-        <primeNumbers>
-            <primeNumbers>2</primeNumbers>
-            <primeNumbers>3</primeNumbers>
-            <primeNumbers>5</primeNumbers>
-            <primeNumbers>7</primeNumbers>
-        </primeNumbers>
-    </data>
-</Outcome>
 ```
 
 ### Hosting on AWS EC2
